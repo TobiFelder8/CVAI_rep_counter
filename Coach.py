@@ -84,15 +84,15 @@ while cap.isOpened():
             feedback_biceps = "Gut gemacht!"
 
         # Anzeigen der Zähler und Feedback für beide Übungen
-        cv2.putText(image, f"Squats: {counter_squats}", (frame.shape[1] - 500, 200),
-                    cv2.FONT_HERSHEY_SIMPLEX, 3, (39,64,139), 5)
-        cv2.putText(image, f"Bizepscurls: {counter_biceps}", (50, 200),
-                    cv2.FONT_HERSHEY_SIMPLEX, 3, (39,64,139), 5)
+        cv2.putText(image, f"Squats: {counter_squats}", (frame.shape[1] - 250, 50),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
+        cv2.putText(image, f"Bizepscurls: {counter_biceps}", (40, 50),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
 
         # Optional: Anzeige des Winkels für jedes Gelenk
-        cv2.putText(image, f"Squats-Winkel: {int(squat_angle)}°", (frame.shape[1] - 500, 100),
+        cv2.putText(image, f"Squats-Winkel: {int(squat_angle)}°", (frame.shape[1] - 250, 100),
                     cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 255), 2)
-        cv2.putText(image, f"Bizeps-Winkel: {int(bicep_angle)}°", (50, 100),
+        cv2.putText(image, f"Bizeps-Winkel: {int(bicep_angle)}°", (40, 100),
                     cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 255), 2)
 
     except:
